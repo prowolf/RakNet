@@ -1,4 +1,9 @@
 cmake_minimum_required(VERSION 2.6)
+
+if (POLICY CMP0048)
+  cmake_policy(SET CMP0048 NEW)
+endif()
+
 project(RakNetLibStatic)
 
 FILE(GLOB ALL_HEADER_SRCS ${RakNet_SOURCE_DIR}/Source/*.h)
